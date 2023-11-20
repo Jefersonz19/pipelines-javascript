@@ -1,0 +1,18 @@
+trigger: 
+- main
+
+pool: 
+   vmImage: Ubuntu2204
+
+jobs:
+- deployment: VMDeploy
+  displayName: Deploy to VM
+  environment: 
+    name: VMenv
+    resourceType: virtualMachine
+    resourceName: SandboxHost-638360319604750425
+  strategy:
+    runOnce:
+      deploy:   
+          steps:
+          - script: echo "Hello world"
