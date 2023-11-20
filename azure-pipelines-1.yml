@@ -9,8 +9,8 @@ jobs:
   displayName: Deploy to VM
   environment: 
    name: javascript-entorno
-   resourceName: myVM
    resourceType: virtualMachine
+   resourceName: SandboxHost-63836031960
   strategy:
      runOnce:
         deploy:   
